@@ -260,5 +260,22 @@
 		</div>
 
 		<script src="assets/scripts.js"></script>
+		<script>
+			// Typing Effect
+			var i = 0;
+			var txt = "Software | Cybersecurity | Technology"; /* The text */
+			var speed = 100; /* The speed/duration of the effect in milliseconds */
+
+			function typeWriter() {
+				if (i < txt.length) {
+					document.getElementById("element").innerHTML += txt.charAt(i);
+					i++;
+					setTimeout(typeWriter, speed);
+				}
+			}
+
+			// Call the function here to start automatically
+			typeWriter();
+		</script>
 	</body>
 </html>

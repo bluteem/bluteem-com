@@ -59,19 +59,3 @@ const currentYear = currentDate.getFullYear();
 const yearElement = document.getElementById("currentYear");
 // Set the content of the element to the current year
 yearElement.textContent = currentYear;
-
-// Typing Effect
-var i = 0;
-var txt = "Software | Cybersecurity | Technology"; /* The text */
-var speed = 100; /* The speed/duration of the effect in milliseconds */
-
-function typeWriter() {
-	if (i < txt.length) {
-		document.getElementById("element").innerHTML += txt.charAt(i);
-		i++;
-		setTimeout(typeWriter, speed);
-	}
-}
-
-// Call the function here to start automatically
-typeWriter();
