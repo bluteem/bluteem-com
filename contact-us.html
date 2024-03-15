@@ -470,6 +470,8 @@
 			</div>
 		</div>
 
+		<div id="formResponse" class="response-box"></div>
+
 		<script src="assets/scripts.js"></script>
 		<script>
 			// Modal Box
@@ -503,10 +505,13 @@
 			// Event listener for closing the modal when clicking outside the modal
 			modalBackdrop.addEventListener("click", closeModal);
 
+			// Form Submission Handling
+			// Form Submission Handling
 			// Select the form element
 			const form = document.getElementById("contactForm");
+			// Select the response box element
+			const responseBox = document.getElementById("formResponse");
 
-			// Form Submission Handling
 			// Add submit event listener to the form
 			form.addEventListener("submit", function (event) {
 				// Prevent the default form submission
@@ -521,9 +526,22 @@
 					body: formData,
 				})
 					.then((response) => {
-						// Handle response (if needed)
-						console.log("Form submission response:", response);
-						// Optionally, you can redirect the user or show a success message here
+						// Handle response
+						if (response.ok) {
+							return response.text(); // Convert response to text
+						} else {
+							throw new Error("Network response was not ok");
+						}
+					})
+					.then((data) => {
+						// Display the response message in the response box
+						responseBox.textContent = data;
+						// Make the response box visible
+						responseBox.style.display = "block";
+						// Hide the response box after 5 seconds (5000 milliseconds)
+						setTimeout(() => {
+							responseBox.style.display = "none";
+						}, 5000);
 					})
 					.catch((error) => {
 						// Handle errors

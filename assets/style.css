@@ -96,3 +96,11 @@ body {
 footer {
 	background-color: #020207;
 }
+
+.response-box {
+	display: none;
+	padding: 10px;
+	margin-top: 10px;
+	border: 1px solid #ccc;
+	background-color: #f9f9f9;
+}
