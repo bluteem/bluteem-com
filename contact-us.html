@@ -108,8 +108,7 @@
 				<div id="contact-us" class="px-6 md:px-12 lg:px-24 pt-28">
 					<h1 class="text-center text-3xl text-white pb-6">Contact Us</h1>
 					<form
-						action="process_form.php"
-						method="post"
+						id="contactForm"
 						class="flex flex-col space-y-4 pb-18 mx-0 md:mx-24 lg-mx-48 mb-12 p-12 rounded-lg bg-[#020207] text-gray-200">
 						<div class="flex flex-col">
 							<label for="name" class="font-medium mb-2">Name: *</label>
@@ -499,6 +498,34 @@
 
 			// Event listener for closing the modal when clicking outside the modal
 			modalBackdrop.addEventListener("click", closeModal);
+
+			// Select the form element
+			const form = document.getElementById("contactForm");
+
+			// Form Submission Handling
+			// Add submit event listener to the form
+			form.addEventListener("submit", function (event) {
+				// Prevent the default form submission
+				event.preventDefault();
+
+				// Get the form data
+				const formData = new FormData(form);
+
+				// Fetch POST request to send form data
+				fetch("process_form.php", {
+					method: "POST",
+					body: formData,
+				})
+					.then((response) => {
+						// Handle response (if needed)
+						console.log("Form submission response:", response);
+						// Optionally, you can redirect the user or show a success message here
+					})
+					.catch((error) => {
+						// Handle errors
+						console.error("Error submitting form:", error);
+					});
+			});
 		</script>
 	</body>
 </html>
