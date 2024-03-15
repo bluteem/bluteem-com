@@ -129,7 +129,7 @@
 								class="h-14 shadow-sm rounded-md px-3 py-2 focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-[#15192a]" />
 						</div>
 						<div class="flex flex-col">
-							<label for="phone" class="font-medium mb-2">Phone:</label>
+							<label for="tel" class="font-medium mb-2">Phone:</label>
 							<input
 								type="tel"
 								id="tel"
@@ -137,7 +137,7 @@
 								class="h-14 shadow-sm rounded-md px-3 py-2 focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-[#15192a]" />
 						</div>
 						<div class="flex flex-col">
-							<label for="cars" class="font-medium mb-2">Select a Topic</label>
+							<label for="topic" class="font-medium mb-2">Select a Topic</label>
 							<select
 								id="topic"
 								name="topic"
@@ -174,7 +174,7 @@
 							>
 						</div>
 						<div class="flex items-center space-x-2 py-2">
-							<input type="hidden" id="recaptcha-token" name="recaptcha-token" />
+							<input type="hidden" id="recaptchaToken" name="recaptchaToken" />
 						</div>
 						<button
 							type="submit"
@@ -506,11 +506,8 @@
 			modalBackdrop.addEventListener("click", closeModal);
 
 			// Form Submission Handling
-			// Form Submission Handling
 			// Select the form element
 			const form = document.getElementById("contactForm");
-			// Select the response box element
-			const responseBox = document.getElementById("formResponse");
 
 			// Add submit event listener to the form
 			form.addEventListener("submit", function (event) {
@@ -526,22 +523,9 @@
 					body: formData,
 				})
 					.then((response) => {
-						// Handle response
-						if (response.ok) {
-							return response.text(); // Convert response to text
-						} else {
-							throw new Error("Network response was not ok");
-						}
-					})
-					.then((data) => {
-						// Display the response message in the response box
-						responseBox.textContent = data;
-						// Make the response box visible
-						responseBox.style.display = "block";
-						// Hide the response box after 5 seconds (5000 milliseconds)
-						setTimeout(() => {
-							responseBox.style.display = "none";
-						}, 5000);
+						// Handle response (if needed)
+						console.log("Form submission response:", response);
+						// Optionally, you can redirect the user or show a success message here
 					})
 					.catch((error) => {
 						// Handle errors
