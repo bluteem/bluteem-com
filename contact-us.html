@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="tr">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TG3XX8KKQP"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-TG3XX8KKQP");
+		</script>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact Us - Bluteem Software Cybersecurity Technology</title>
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="Contact Us - Bluteem Software Cybersecurity Technology" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:url" content="https://bluteem.com" />
+		<!-- Add more Open Graph meta tags as needed -->
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Bluteem Software Cybersecurity Technology" />
+		<meta name="robots" content="index, follow" />
+
+		<link rel="icon" href="images/favicon.ico" />
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet" />
+		<!-- Include Tailwind CSS via CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="assets/style.css" />
+	</head>
+	<body>
+		<!-- Loading Screen -->
+		<div class="loading-screen">
+			<div class="loader"></div>
+		</div>
+
+		<!-- Page Content (Initially Hidden) -->
+		<div class="page-content hidden">
+			<!-- Sticky Navbar -->
+			<nav class="fixed w-full top-0 z-50 bg-gray-800 bg-opacity-90 text-white">
+				<div class="container mx-auto">
+					<div class="flex justify-between items-center py-2">
+						<div class="ml-8 md:ml-24 mr-auto text-lg">
+							<img src="images/logo.png" class="w-20 inline-block" alt="Logo" />
+						</div>
+						<!-- Responsive Menu Links (Initially Hidden) -->
+						<div id="menuLinks" class="hidden md:flex space-x-4 ml-auto mr-24">
+							<a href="/" class="hover:bg-gray-700 px-3 py-4 rounded">Home</a>
+							<a href="about-us.html" class="hover:bg-gray-700 px-3 py-4 rounded">About</a>
+							<a href="services.html" class="hover:bg-gray-700 px-3 py-4 rounded">Services</a>
+							<a href="contact-us.html" class="hover:bg-gray-700 px-3 py-4 rounded">Contact</a>
+						</div>
+						<!-- Responsive Menu Button -->
+						<div class="md:hidden mx-6 pt-2 ml-auto">
+							<button id="menuBtn" onclick="toggleMenu()" class="text-white focus:outline-none">
+								<svg fill="#fff" viewBox="-2.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10">
+									<path
+										d="M.789 4.836a1.03 1.03 0 0 1 1.03-1.029h10.363a1.03 1.03 0 1 1 0 2.059H1.818A1.03 1.03 0 0 1 .79 4.836zm12.422 4.347a1.03 1.03 0 0 1-1.03 1.029H1.819a1.03 1.03 0 0 1 0-2.059h10.364a1.03 1.03 0 0 1 1.029 1.03zm0 4.345a1.03 1.03 0 0 1-1.03 1.03H1.819a1.03 1.03 0 1 1 0-2.059h10.364a1.03 1.03 0 0 1 1.029 1.03z" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+			<!-- Off-canvas Menu -->
+			<div
+				id="offCanvasMenu"
+				class="off-canvas fixed top-0 h-screen bg-gray-600 z-50 transition-transform duration-300 ease-in-out left-[-250px] w-[250px]">
+				<ul>
+					<li><h2 class="py-4 px-6 text-sky-500 border-b border-white">Menü</h2></li>
+					<li>
+						<a href="/" onclick="toggleMenu()" class="block py-4 px-6 text-white no-underline hover:bg-gray-800"
+							>Home</a
+						>
+					</li>
+					<li>
+						<a
+							href="about-us.html"
+							onclick="toggleMenu()"
+							class="block py-4 px-6 text-white no-underline hover:bg-gray-800"
+							>About</a
+						>
+					</li>
+					<li>
+						<a
+							href="services.html"
+							onclick="toggleMenu()"
+							class="block py-4 px-6 text-white no-underline hover:bg-gray-800"
+							>Services</a
+						>
+					</li>
+					<li>
+						<a
+							href="contact-us.html"
+							onclick="toggleMenu()"
+							class="block py-4 px-6 text-white no-underline hover:bg-gray-800"
+							>Contact</a
+						>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Content Sections -->
+			<main>
+				<div id="contact-us" class="px-6 md:px-12 lg:px-24 pt-28">
+					<h1 class="text-center text-3xl text-white pb-6">Contact Us</h1>
+					<form
+						action="process_form.php"
+						method="post"
+						class="flex flex-col space-y-4 pb-18 mx-0 md:mx-24 lg-mx-48 mb-12 p-12 rounded-lg bg-[#020207] text-gray-200">
+						<div class="flex flex-col">
+							<label for="name" class="font-medium mb-2">Name: *</label>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								required
+								class="h-14 shadow-sm rounded-md px-3 py-2 focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-[#15192a]" />
+						</div>
+						<div class="flex flex-col">
+							<label for="email" class="font-medium mb-2">Email: *</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								required
+								class="h-14 shadow-sm rounded-md px-3 py-2 focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-[#15192a]" />
+						</div>
+						<div class="flex flex-col">
+							<label for="phone" class="font-medium mb-2">Phone:</label>
+							<input
+								type="tel"
+								id="tel"
+								name="tel"
+								class="h-14 shadow-sm rounded-md px-3 py-2 focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-[#15192a]" />
+						</div>
+						<div class="flex flex-col">
+							<label for="cars" class="font-medium mb-2">Select a Topic</label>
+							<select
+								id="topic"
+								name="topic"
+								class="h-14 shadow-sm rounded-md px-3 py-2 focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-[#15192a]">
+								<option value="">Select a Topic</option>
+								<option value="Web Services">Web Services</option>
+								<option value="Security Services">Security Services</option>
+								<option value="Consultancy">Consultancy</option>
+								<option value="Training">Training</option>
+								<option value="Kişisel Veri Sahibi Tarafından Veri Sorumlusuna Yapılacak Başvurular">
+									Kişisel Veri Sahibi Tarafından Veri Sorumlusuna Yapılacak Başvurular
+								</option>
+							</select>
+						</div>
+						<div class="flex flex-col">
+							<label for="message" class="font-medium mb-2">Message: *</label>
+							<textarea
+								id="message"
+								name="message"
+								rows="5"
+								required
+								class="shadow-sm rounded-md px-3 py-2 focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-[#15192a]"></textarea>
+						</div>
+						<div class="flex items-center space-x-2 py-2">
+							<input type="checkbox" id="data-consent" name="data-consent" class="w-5 h-5 bg-[#15192a] rounded-md" />
+							<label for="data-consent"
+								>I have read the <a href="#" class="underline" id="triggerModal">clarification text</a> regarding the
+								processing of personal data. *</label
+							>
+						</div>
+						<button
+							type="submit"
+							class="h-14 inline-flex items-center px-4 py-2 rounded-md bg-gray-600 hover:bg-[#15192a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 justify-center">
+							Send
+						</button>
+					</form>
+				</div>
+			</main>
+
+			<footer>
+				<div class="container mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-white pt-16 pb-24 px-24">
+						<div class="col-span-2 mb-12">
+							<img src="images/logo.png" class="w-20 mb-6" alt="" />
+							<p class="mb-4">Paşakent Mh 1050 Sk 5A/5<br />Bandırma / Balıkesir<br />10200 Türkiye</p>
+							<p>+90 551 448 81 00</p>
+						</div>
+						<div>
+							<h3>About Us</h3>
+							<div class="mt-1 mb-4 border-t border-2 border-white w-10"></div>
+							<a
+								href="about-us.html"
+								class="block text-gray-600 hover:text-gray-200 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+								>Who We Are</a
+							>
+							<a
+								href="contact-us.html"
+								class="block text-gray-600 hover:text-gray-200 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+								>Contact Us</a
+							>
+						</div>
+						<div>
+							<h3>Services</h3>
+							<div class="mt-1 mb-4 border-t border-2 border-white w-10"></div>
+							<a
+								href="services.html#web-services"
+								class="block text-gray-600 hover:text-gray-400 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+								>Web Services</a
+							>
+							<a
+								href="services.html#security-services"
+								class="block text-gray-600 hover:text-gray-200 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+								>Security Services</a
+							>
+							<a
+								href="services.html#consultancy"
+								class="block text-gray-600 hover:text-gray-200 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+								>Consultancy</a
+							>
+							<a
+								href="services.html#training"
+								class="block text-gray-600 hover:text-gray-200 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+								>Training</a
+							>
+						</div>
+					</div>
+					<div class="grid grid-cols-4 gap-4 text-white px-24 pb-16">
+						<div class="mx-auto"><img src="images/logo-isc2.svg" class="h-14 p-3 bg-white" alt="ISC2" /></div>
+						<div class="mx-auto"><img src="images/logo-ceh.webp" class="h-14" alt="ISC2" /></div>
+						<div class="mx-auto"><img src="images/logo-google-ads.png" class="h-14 p-3 bg-white" alt="ISC2" /></div>
+						<div class="mx-auto"><img src="images/logo-cpanel.svg" class="h-14 p-3" alt="ISC2" /></div>
+					</div>
+					<div class="border-t border-gray-600 mx-16"></div>
+					<div class="grid grid-cols-2 gap-4 text-white py-10 px-24">
+						<div>
+							<a href="privacy-policy.html">Privacy Policy</a>
+						</div>
+						<div class="text-right"><span id="currentYear"></span> - BluTeem</div>
+					</div>
+				</div>
+			</footer>
+
+			<!-- Scroll Up Button -->
+			<button
+				onclick="scrollToTop()"
+				id="scrollButton"
+				class="hidden fixed bottom-6 right-6 bg-gray-800 text-white px-4 py-4 rounded-full shadow-md hover:bg-gray-700">
+				<!-- Up Arrow SVG -->
+				<svg
+					fill="#fff"
+					class="w-7 h-7"
+					version="1.1"
+					id="Layer_1"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 511.867 511.867"
+					xml:space="preserve">
+					<g>
+						<g>
+							<path
+								d="M508.827,350.027L263.493,104.373c-4.267-4.053-10.88-4.053-15.147,0L3.12,350.027c-4.16,4.16-4.16,10.88,0,15.04
+					l42.24,42.347c4.267,4.053,10.88,4.053,15.147,0L255.92,211.68l195.52,195.733c4.16,4.16,10.88,4.16,15.04,0l42.347-42.347
+					C512.88,360.907,512.88,354.187,508.827,350.027z M459.013,384.8l-195.52-195.733c-4.16-4.16-10.88-4.16-15.04,0L52.933,384.8
+					l-27.2-27.307L255.92,126.987l230.293,230.507L459.013,384.8z" />
+						</g>
+					</g>
+				</svg>
+			</button>
+
+			<!-- Modal Box -->
+			<!-- Modal backdrop -->
+			<div id="modalBackdrop" class="fixed top-0 left-0 w-full h-full bg-black opacity-50 hidden"></div>
+
+			<!-- Modal container -->
+			<div
+				id="modalContainer"
+				class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-200 rounded-lg shadow-lg w-4/5 hidden h-4/5 z-50">
+				<!-- Modal actions -->
+				<div class="flex justify-end">
+					<button
+						id="closeButton"
+						class="bg-[#15192a] hover:bg-[#020207] text-white font-semibold px-4 py-1 rounded mr-1 mt-1 mb-1">
+						X
+					</button>
+				</div>
+				<!-- Modal content -->
+				<div class="px-8 overflow-y-auto overflow-hidden h-[90%]">
+					<h2 class="text-xl font-semibold mb-6">Aydınlatma Metni</h2>
+					<p class="text-gray-700 mb-4">
+						İşbu Aydınlatma Metni, Bluteem Yazılım Siber Güvenlik Teknoloji San. ve Tic. Ltd. Şirketi ("Şirket")
+						tarafından Şirket’in müşterilerinin 6698 sayılı Kişisel Verilerin Korunması Kanunu (“Kanun”) kapsamında
+						kişisel verilerinin Şirket tarafından işlenmesine ilişkin olarak aydınlatılması amacıyla hazırlanmıştır.
+					</p>
+					<p class="text-gray-700 mb-4">
+						Kişisel verilerinizin işbu Aydınlatma Metni kapsamında işlenmesine ilişkin detaylı bilgilere
+						[www.bluteem.com/privacy-policy.html] adresinde yer alan Bluteem Yazılım Siber Güvenlik Teknoloji San. ve
+						Tic. Ltd. Şirketi Kişisel Verilerin Korunması ve İşlenmesi Politikası’ndan ulaşabilirsiniz.
+					</p>
+					<p class="text-gray-700 mb-2 font-bold">a) Kişisel Verilerin Elde Edilme Yöntemleri ve Hukuki Sebepleri</p>
+					<p class="text-gray-700 mb-4">
+						Kişisel verileriniz, elektronik veya fiziki ortamda toplanmaktadır. İşbu Aydınlatma Metni’nde belirtilen
+						hukuki sebeplerle toplanan kişisel verileriniz Kanun’un 5. ve 6. maddelerinde belirtilen kişisel veri işleme
+						şartları çerçevesinde işlenebilmekte ve paylaşılabilmektedir.
+					</p>
+					<p class="text-gray-700 mb-2 font-bold">b) Kişisel Verilerin İşleme Amaçları</p>
+					<p class="text-gray-700 mb-4">
+						Kişisel verileriniz, Kanun’un 5. ve 6. maddelerinde belirtilen kişisel veri işleme şartları çerçevesinde
+						Şirket tarafından sunulan ürün ve hizmetlerin ilgili kişilerin beğeni, kullanım alışkanlıkları ve
+						ihtiyaçlarına göre özelleştirilerek ilgili kişilere önerilmesi ve tanıtılması için gerekli olan
+						aktivitelerin planlanması ve icrası, Şirket tarafından sunulan ürün ve hizmetlerden ilgili kişileri
+						faydalandırmak için gerekli çalışmaların iş birimleri tarafından yapılması ve ilgili iş süreçlerinin
+						yürütülmesi, Şirket tarafından yürütülen ticari faaliyetlerin gerçekleştirilmesi için ilgili iş birimleri
+						tarafından gerekli çalışmaların yapılması ve buna bağlı iş süreçlerinin yürütülmesi, Şirket‘in ticari
+						ve/veya iş stratejilerinin planlanması ve icrası ve Şirket‘in ve Şirket‘le iş ilişkisi içerisinde olan
+						ilgili kişilerin hukuki, teknik ve ticari-iş güvenliğinin temini amaçlarıyla işlenmektedir.
+					</p>
+					<p class="text-gray-700 mb-2 font-bold">
+						c) Kişisel Verilerin Paylaşılabileceği Taraflar ve Paylaşım Amaçları
+					</p>
+					<p class="text-gray-700 mb-4">
+						Kişisel verileriniz, Kanun’un 8. ve 9. maddelerinde belirtilen kişisel veri işleme şartları ve amaçları
+						çerçevesinde, Şirket tarafından sunulan ürün ve hizmetlerin ilgili kişilerin beğeni, kullanım alışkanlıkları
+						ve ihtiyaçlarına göre özelleştirilerek ilgili kişilere önerilmesi ve tanıtılması için gerekli olan
+						aktivitelerin planlanması ve icrası, Şirket tarafından sunulan ürün ve hizmetlerden ilgili kişileri
+						faydalandırmak için gerekli çalışmaların iş birimleri tarafından yapılması ve ilgili iş süreçlerinin
+						yürütülmesi, Şirket tarafından yürütülen ticari faaliyetlerin gerçekleştirilmesi için ilgili iş birimleri
+						tarafından gerekli çalışmaların yapılması ve buna bağlı iş süreçlerinin yürütülmesi, Şirket‘in ticari
+						ve/veya iş stratejilerinin planlanması ve icrası ve Şirket‘in ve Şirket‘le iş ilişkisi içerisinde olan
+						ilgili kişilerin hukuki, teknik ve ticari-iş güvenliğinin temini amaçları dahilinde Şirket’in iş ortakları
+						ve tedarikçileri ile hukuken yetkili kurum ve kuruluşlar ile hukuken yetkili özel hukuk tüzel kişileriyle
+						paylaşılabilecektir.
+					</p>
+					<p class="text-gray-700 mb-2 font-bold">d) Veri Sahiplerinin Hakları ve Bu Hakların Kullanılması</p>
+					<p class="text-gray-700 mb-4">
+						Kişisel veri sahipleri olarak aşağıda belirtilen haklarınıza ilişkin taleplerinizi Veri Sahipleri Tarafından
+						Hakların Kullanılması başlığı altında belirtilen yöntemlerle Şirket’e iletmeniz durumunda talepleriniz
+						Şirketimiz tarafından mümkün olan en kısa sürede ve her halde 30 (otuz) gün içerisinde değerlendirilerek
+						sonuçlandırılacaktır.
+					</p>
+					<p class="text-gray-700 mb-2 font-bold">
+						Kanun’un 11. maddesi uyarınca kişisel veri sahibi olarak aşağıdaki haklara sahipsiniz:
+					</p>
+					<ul class="text-gray-700 mb-4 list-inside list-disc">
+						<li class="pl-6">Kişisel verilerinizin işlenip işlenmediğini öğrenme,</li>
+						<li class="pl-6">Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme,</li>
+						<li class="pl-6">
+							Kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,
+						</li>
+						<li class="pl-6">Yurt içinde veya yurt dışında kişisel verilerinizin aktarıldığı üçüncü kişileri bilme,</li>
+						<li class="pl-6">
+							Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme ve bu
+							kapsamda yapılan işlemin kişisel verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,
+						</li>
+						<li class="pl-6">
+							Kanun ve ilgili diğer kanun hükümlerine uygun olarak işlenmiş olmasına rağmen, işlenmesini gerektiren
+							sebeplerin ortadan kalkması hâlinde kişisel verilerinizin silinmesini veya yok edilmesini isteme ve bu
+							kapsamda yapılan işlemin kişisel verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,
+						</li>
+						<li class="pl-6">
+							İşlenen verilerinizin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle kişinin kendisi
+							aleyhine bir sonucun ortaya çıkmasına itiraz etme,
+						</li>
+						<li class="pl-6">
+							Kişisel verilerinizin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın
+							giderilmesini talep etme.
+						</li>
+					</ul>
+					<p class="text-gray-700 mb-2 list-inside list-disc">
+						Kanun’un 28. maddesinin 2. fıkrası veri sahiplerinin talep hakkı bulunmayan halleri sıralamış olup bu
+						kapsamda;
+					</p>
+					<ul class="text-gray-700 mb-2">
+						<li class="pl-6">
+							Kişisel veri işlemenin suç işlenmesinin önlenmesi veya suç soruşturması için gerekli olması,
+						</li>
+						<li class="pl-6">İlgili kişinin kendisi tarafından alenileştirilmiş kişisel verilerin işlenmesi,</li>
+						<li class="pl-6">
+							Kişisel veri işlemenin kanunun verdiği yetkiye dayanılarak görevli ve yetkili kamu kurum ve kuruluşları
+							ile kamu kurumu niteliğindeki meslek kuruluşlarınca, denetleme veya düzenleme görevlerinin yürütülmesi ile
+							disiplin soruşturma veya kovuşturması için gerekli olması,
+						</li>
+						<li class="pl-6">
+							Kişisel veri işlemenin bütçe, vergi ve mali konulara ilişkin olarak Devletin ekonomik ve mali çıkarlarının
+							korunması için gerekli olması,
+						</li>
+					</ul>
+					<p class="text-gray-700 mb-4">
+						hallerinde verilere yönelik olarak yukarıda belirlenen haklar kullanılamayacaktır.
+					</p>
+					<p class="text-gray-700 mb-4">
+						Kanun’un 28. maddesinin 1. fıkrasına göre ise aşağıdaki durumlarda veriler Kanun kapsamı dışında
+						olacağından, veri sahiplerinin talepleri bu veriler bakımından da işleme alınmayacaktır:
+					</p>
+					<ul class="text-gray-700 mb-4 list-inside list-disc">
+						<li class="pl-6">
+							Kişisel verilerin, üçüncü kişilere verilmemek ve veri güvenliğine ilişkin yükümlülüklere uyulmak kaydıyla
+							gerçek kişiler tarafından tamamen kendisiyle veya aynı konutta yaşayan aile fertleriyle ilgili faaliyetler
+							kapsamında işlenmesi.
+						</li>
+						<li class="pl-6">
+							Kişisel verilerin resmi istatistik ile anonim hâle getirilmek suretiyle araştırma, planlama ve istatistik
+							gibi amaçlarla işlenmesi.
+						</li>
+						<li class="pl-6">
+							Kişisel verilerin millî savunmayı, millî güvenliği, kamu güvenliğini, kamu düzenini, ekonomik güvenliği,
+							özel hayatın gizliliğini veya kişilik haklarını ihlal etmemek ya da suç teşkil etmemek kaydıyla, sanat,
+							tarih, edebiyat veya bilimsel amaçlarla ya da ifade özgürlüğü kapsamında işlenmesi.
+						</li>
+						<li class="pl-6">
+							Kişisel verilerin millî savunmayı, millî güvenliği, kamu güvenliğini, kamu düzenini veya ekonomik
+							güvenliği sağlamaya yönelik olarak kanunla görev ve yetki verilmiş kamu kurum ve kuruluşları tarafından
+							yürütülen önleyici, koruyucu ve istihbari faaliyetler kapsamında işlenmesi.
+						</li>
+						<li class="pl-6">
+							Kişisel verilerin soruşturma, kovuşturma, yargılama veya infaz işlemlerine ilişkin olarak yargı makamları
+							veya infaz mercileri tarafından işlenmesi.
+						</li>
+					</ul>
+					<p class="text-gray-700 mb-2 font-bold">Veri Sahipleri Tarafından Hakların Kullanılması</p>
+					<p class="text-gray-700 mb-4">
+						Veri sahipleri, yukarıda bahsi geçen hakları kullanmak için [https://bluteem.com/contact-us.html] linkinde
+						yer alan "Kişisel Veri Sahibi Tarafından Veri Sorumlusuna Yapılacak Başvurulara ilişkin Form"u
+						kullanabileceklerdir.
+					</p>
+					<p class="text-gray-700 mb-4">
+						Başvurular, ilgili veri sahibinin kimliğini tespit edecek belgelerle birlikte, aşağıdaki yöntemlerden biri
+						ile gerçekleştirilecektir:
+					</p>
+					<ul class="text-gray-700 mb-4 list-inside list-disc">
+						<li class="pl-6">
+							Formun doldurularak ıslak imzalı kopyasının elden, noter aracılığı ile veya iadeli taahhütlü mektupla
+							[Paşakent Mh 1050 Sk 5A/5 Bandırma 10200 Balıkesir - Türkiye] adresine iletilmesi,
+						</li>
+						<li class="pl-6">
+							Formun 5070 sayılı Elektronik İmza Kanunu kapsamında düzenlenen güvenli elektronik imza ile imzalanarak
+							[bluteem@hs01].kep.tr adresine kayıtlı elektronik posta ile gönderilmesi,
+						</li>
+						<li class="pl-6">Kişisel Verileri Koruma Kurulu tarafından öngörülen bir yöntemin izlenmesi.</li>
+					</ul>
+					<p class="text-gray-700 mb-4">
+						Şirket, Kanun’da öngörülmüş sınırlar çerçevesinde söz konusu hakları kullanmak isteyen veri sahiplerine,
+						yine Kanun’da öngörülen şekilde azami otuz (30) gün içerisinde cevap vermektedir. Kişisel veri sahipleri
+						adına üçüncü kişilerin başvuru talebinde bulunabilmesi için veri sahibi tarafından başvuruda bulunacak kişi
+						adına noter kanalıyla düzenlenmiş özel vekâletname bulunmalıdır.
+					</p>
+					<p class="text-gray-700 mb-4">
+						Veri sahibi başvuruları kural olarak ücretsiz olarak işleme alınmakla birlikte, Kişisel Verileri Koruma
+						Kurulu tarafından öngörülen ücret tarifesi[1] üzerinden ücretlendirme yapılabilecektir.
+					</p>
+					<p class="text-gray-700 mb-4">
+						Şirket, başvuruda bulunan kişinin kişisel veri sahibi olup olmadığını tespit etmek adına ilgili kişiden
+						bilgi talep edebilir, başvuruda belirtilen hususları netleştirmek adına, kişisel veri sahibine başvurusu ile
+						ilgili soru yöneltebilir.
+					</p>
+					<div class="border-t border-gray-600 mb-4"></div>
+					<p class="text-gray-700 mb-4">
+						[1] 10.03.2018 tarih ve 30356 sayılı Resmi Gazete’de yayınlanan “Veri Sorumlusuna Başvuru Usul ve Esasları
+						Hakkında Tebliğ” uyarınca, veri sahiplerinin başvurusuna yazılı olarak cevap verilecekse, on sayfaya kadar
+						ücret alınmaz. On sayfanın üzerindeki her sayfa için 1 Türk Lirası işlem ücreti alınabilir. Başvuruya
+						cevabın CD, flash bellek gibi bir kayıt ortamında verilmesi halinde Kurum tarafından talep edilebilecek
+						ücret kayıt ortamının maliyetini geçemez.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script src="assets/scripts.js"></script>
+		<script>
+			// Modal Box
+			// Get references to modal elements
+			const modalBackdrop = document.getElementById("modalBackdrop");
+			const modalContainer = document.getElementById("modalContainer");
+			const closeButton = document.getElementById("closeButton");
+			const triggerModal = document.getElementById("triggerModal");
+
+			// Function to open the modal
+			function openModal() {
+				modalBackdrop.classList.remove("hidden");
+				modalContainer.classList.remove("hidden");
+			}
+
+			// Function to close the modal
+			function closeModal() {
+				modalBackdrop.classList.add("hidden");
+				modalContainer.classList.add("hidden");
+			}
+
+			// Event listener for opening the modal when trigger link is clicked
+			triggerModal.addEventListener("click", function (event) {
+				event.preventDefault(); // Prevent the default action of the link
+				openModal();
+			});
+
+			// Event listener for closing the modal when cancel button is clicked
+			closeButton.addEventListener("click", closeModal);
+
+			// Event listener for closing the modal when clicking outside the modal
+			modalBackdrop.addEventListener("click", closeModal);
+		</script>
+	</body>
+</html>
