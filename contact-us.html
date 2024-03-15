@@ -37,6 +37,7 @@
 		<!-- Include Tailwind CSS via CDN -->
 		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="stylesheet" href="assets/style.css" />
+		<script src="https://www.google.com/recaptcha/api.js?render=6Lf01JkpAAAAANQsNvZT5VaTbAjfinp6d68Tw9PV"></script>
 	</head>
 	<body>
 		<!-- Loading Screen -->
@@ -167,6 +168,9 @@
 								>I have read the <a href="#" class="underline" id="triggerModal">clarification text</a> regarding the
 								processing of personal data. *</label
 							>
+						</div>
+						<div class="flex items-center space-x-2 py-2">
+							<input type="hidden" id="recaptcha-token" name="recaptcha-token" />
 						</div>
 						<button
 							type="submit"
